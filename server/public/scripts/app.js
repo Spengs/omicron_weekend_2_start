@@ -38,17 +38,19 @@ function createBlocks(data){
 
   function clickNext(){
       $('.container').empty();
-      $('.container').append("<p>Name: " + array[t].name + "</p>");
+      $('.container').append("<p>Name: " + array[++t].name + "</p>");
       $('.container').append("<p>Git Username: " + array[t].git_username + "</p>");
-      $('.container').append("<p>Shoutout: " + array[t++].shoutout + "</p>");
+      $('.container').append("<p>Shoutout: " + array[t].shoutout + "</p>");
+
 
   }
 
   function clickPrev(){
     $('.container').empty();
-    $('.container').append("<p>Name: " + array[t].name + "</p>");
+    $('.container').append("<p>Name: " + array[--t].name + "</p>");
     $('.container').append("<p>Git Username: " + array[t].git_username + "</p>");
-    $('.container').append("<p>Shoutout: " + array[t--].shoutout + "</p>");
+    $('.container').append("<p>Shoutout: " + array[t].shoutout + "</p>");
+
 
   }
 var array = [];
