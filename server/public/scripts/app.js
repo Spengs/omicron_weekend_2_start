@@ -41,8 +41,8 @@ function createBlocks(data){
       $('.container').append("<p>Name: " + array[++t].name + "</p>");
       $('.container').append("<p>Git Username: " + array[t].git_username + "</p>");
       $('.container').append("<p>Shoutout: " + array[t].shoutout + "</p>");
-      $('.boxes').children().data('id').css('background-color', 'red');
-
+      $('.boxes').children().eq(t).css('background-color', 'red');
+      $('.boxes').children().eq(t - 1).css('background-color', 'gray');
       }
 
 
@@ -51,6 +51,8 @@ function createBlocks(data){
     $('.container').append("<p>Name: " + array[--t].name + "</p>");
     $('.container').append("<p>Git Username: " + array[t].git_username + "</p>");
     $('.container').append("<p>Shoutout: " + array[t].shoutout + "</p>");
+    $('.boxes').children().eq(t).css('background-color', 'red');
+    $('.boxes').children().eq(t + 1).css('background-color', 'gray');
   }
 
   function clickBox(){
